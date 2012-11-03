@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Markdown</title>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/editor.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/gfm.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/github.css" />
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript" src="prettify/prettify.js"></script>
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="marked.js"></script>
+
+    </head>
+
+    <body>
+        
+        <div id="wrapper">
+            <div id="left">
+                <h3>README.md</h3>
+                <div id="inner">
+                    <textarea id="input"></textarea>
+                </div>
+                <div id="about">Powered by 
+                    <a href="https://github.com/chjj/marked">Marked</a> and
+                    <a href="http://code.google.com/p/google-code-prettify/">Prettify</a> with 
+                    <a href="https://github.com/jmblog/color-themes-for-google-code-prettify">GitHub Style</a>.
+                </div>
+            </div>
+
+            <div id="right">
+                <h3>GitHub Markdown Preview</h3>
+                <div id="output"></div>
+            </div>
+
+        </div>
+     
+        <script type="text/javascript" src="editor.js"></script>
+
+    </body>
+
+</html>

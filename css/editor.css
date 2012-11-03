@@ -1,0 +1,64 @@
+body {
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0px auto;
+    min-width: 1072px;
+    max-width: 1486px;
+}
+
+#right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 572px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#left {
+    position: fixed;
+    height: 100%;
+    width: 570px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#input, #output {
+    border: 1px solid #CACACA;
+}
+
+#inner {
+    position: relative;
+    height: 100%;
+}
+
+#input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 60px;
+    right: 0px;
+
+    margin: 0px;
+    padding: 10px;
+
+    width: 538px;
+    resize: none;
+    outline: none;
+
+    background-color: #f5f5ff;
+    border-right: 6px solid #CACACA;
+
+}
+
+#about {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    color: #999;
+}
