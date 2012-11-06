@@ -1,7 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
     font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif;
     padding-right: 5px;
     padding-left: 5px;
+    height: 100%;
+    background-color: #e5e5e5;
 }
 
 #wrapper {
@@ -9,6 +15,59 @@ body {
     margin: 0px auto;
     min-width: 1072px;
     max-width: 1486px;
+    height: 100%;
+}
+
+
+.container {
+    padding: 15px;
+    border: 1px solid #cacaca;
+    background-color: #ffffff;
+}
+
+#left {
+    position: fixed;
+    height: 100%;
+    width: 570px;
+}
+
+#left > h3, #right h3 {
+    height: 30px;
+    padding: 0px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.editor {
+    position: absolute;
+    top: 34px;
+    bottom: 10px;
+    left: 2px;
+    right: 0px;
+    padding: 2px;
+    background-color: #d3d3d3;
+    border-radius: 2px;
+}
+
+#editor {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    padding: 0px;
+}
+
+#editor .CodeMirror {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    padding: 0px;
 }
 
 #right {
@@ -16,49 +75,17 @@ body {
     top: 0px;
     right: 0px;
     left: 572px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
-#left {
-    position: fixed;
-    height: 100%;
-    width: 570px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#input, #output {
-    border: 1px solid #CACACA;
-}
-
-#inner {
-    position: relative;
-    height: 100%;
-}
-
-#input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 60px;
-    right: 0px;
-
-    margin: 0px;
-    padding: 10px;
-
-    width: 538px;
-    resize: none;
-    outline: none;
-
-    background-color: #f5f5ff;
-    border-right: 6px solid #CACACA;
-
+.markdown {
+    padding: 2px;
+    background-color: #d3d3d3;
+    border-radius: 2px;
 }
 
 #about {
     position: absolute;
-    top: 24px;
-    right: 10px;
-    color: #999;
+    top: 12px;
+    right: 4px;
 }
+

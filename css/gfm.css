@@ -1,4 +1,4 @@
-#output {
+#markdown {
   font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
@@ -9,11 +9,11 @@
   color: #333;
 }
 
-#output > *:first-child {
+#markdown > *:first-child {
   margin-top: 0 !important;
 }
 
-#output > *:last-child {
+#markdown > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -119,22 +119,22 @@ hr {
   padding: 0;
 }
 
-#output > h2:first-child {
+#markdown > h2:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-#output > h1:first-child {
+#markdown > h1:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-#output > h1:first-child + h2 {
+#markdown > h1:first-child + h2 {
   margin-top: 0;
   padding-top: 0;
 }
 
-#output > h3:first-child, #output > h4:first-child, #output > h5:first-child, #output > h6:first-child {
+#markdown > h3:first-child, #markdown > h4:first-child, #markdown > h5:first-child, #markdown > h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }

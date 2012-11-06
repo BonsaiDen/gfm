@@ -1,13 +1,21 @@
-/*global $, marked, prettyPrint */
+/*global $, marked, prettyPrint, CodeMirror */
 $(document).ready(function() {
 
-    var input = $('#input'),
-        output = $('#output'),
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: 'markdown',
+        lineNumbers: true,
+        matchBrackets: false,
+        theme: 'default',
+        indentUnit: 4
+    });
+
+    var outer = $('#editor .CodeMirror'),
+        output = $('#markdown'),
         oldText = '';
 
     function update() {
 
-        var text = input.val();
+        var text = editor.getValue();
         if (text === oldText) {
             return;
 
@@ -24,12 +32,19 @@ $(document).ready(function() {
     var padding = 30,
         top = document.body.scrollTop;
 
+    $(window).bind('resize', function() {
+        $('.CodeMirror-scroll').height(outer.height());
+    });
+    $('.CodeMirror-scroll').height(outer.height());
+
+
     // Prevent overscrolling in the textarea from messing around with the body
     // scroll value (and thus scrolling the markdown preview)
-    input.bind('mousewheel', function(e) {
+    var scroll = $('#editor .CodeMirror-scrollbar');
+    outer.bind('mousewheel', function(e) {
 
-        var maxScroll = (input[0].scrollHeight - input.height()) - padding * 2,
-            scrollTop = input[0].scrollTop;
+        var maxScroll = (scroll[0].scrollHeight - scroll.height()),
+            scrollTop = scroll[0].scrollTop;
 
         var dir = e.wheelDelta < 0 ? 1 : -1;
         if ((scrollTop <= 0 && dir === -1) || (scrollTop >= maxScroll && dir === 1)) {
